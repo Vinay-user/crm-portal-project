@@ -1,0 +1,155 @@
+================================================================================
+                    LEADS FUNCTIONALITY - FILES TO UPDATE
+================================================================================
+
+Your Backend ✅ COMPLETE - NO CHANGES NEEDED
+Your Database ✅ COMPLETE - NO CHANGES NEEDED
+Your Services ✅ COMPLETE - NO CHANGES NEEDED
+
+================================================================================
+                         FRONTEND - 2 FILES TO UPDATE
+================================================================================
+
+1. CREATE NEW FILE - LeadForm Component
+───────────────────────────────────────────────────────────────────────────────
+   File Path: frontend/src/pages/leads/LeadForm.jsx
+   
+   Action: CREATE (This is a new file)
+   
+   What it does:
+   - Modal dialog for adding and editing leads
+   - Form validation
+   - All lead fields (firstName, lastName, email, phone, company, source, status, notes)
+   - Error handling and display
+   
+   File Name: LeadForm.jsx (provided)
+
+
+2. UPDATE EXISTING FILE - Leads Page
+───────────────────────────────────────────────────────────────────────────────
+   File Path: frontend/src/pages/leads/Leads.jsx
+   
+   Action: REPLACE (Completely replace existing file)
+   
+   What changed:
+   - Added modal state management
+   - Added form submission handlers for create/update/delete
+   - Added Edit button (pencil icon) on each row
+   - Added Delete button (trash icon) on each row
+   - Added confirmation dialog for delete
+   - Wired up the "Add Lead" button
+   - Added error handling and display
+   - Added action buttons column to the table
+   
+   File Name: Leads.jsx (provided)
+
+
+================================================================================
+                            OPTIONAL - CSS STYLING
+================================================================================
+
+If you don't already have these CSS classes, add them to your stylesheet:
+- Modal styles (.modal-overlay, .modal-content, .modal-header, .modal-footer)
+- Form styles (.form-group, .form-group input, .form-group textarea, etc.)
+- Action buttons (.action-buttons, .icon-button, .edit-button, .delete-button)
+- Alert styles (.alert, .alert-error)
+- Status badge (.status-badge)
+
+See: IMPLEMENTATION_GUIDE.md for complete CSS code
+
+
+================================================================================
+                            SUMMARY & CHECKLIST
+================================================================================
+
+Frontend Updates Required:
+   [ ] Create: frontend/src/pages/leads/LeadForm.jsx
+   [ ] Update: frontend/src/pages/leads/Leads.jsx
+   [ ] (Optional) Add CSS classes to your stylesheet
+
+Backend:
+   ✅ No changes needed - already complete!
+
+Database:
+   ✅ No changes needed - already complete!
+
+Services (leadService.js):
+   ✅ No changes needed - already complete!
+
+
+================================================================================
+                          FEATURES NOW AVAILABLE
+================================================================================
+
+✓ Add Lead - Click "Add Lead" button, fill form, submit
+✓ Edit Lead - Click edit (pencil) icon on any row
+✓ Delete Lead - Click delete (trash) icon with confirmation
+✓ Search/Filter - Works on name and email
+✓ Form Validation - First name, last name, email format
+✓ Status Management - Dropdown with all statuses
+✓ Error Handling - User-friendly error messages
+✓ Loading States - Shows loading during operations
+
+
+================================================================================
+                             FILE LOCATIONS
+================================================================================
+
+Files Provided:
+   - LeadForm.jsx
+   - Leads.jsx
+   - IMPLEMENTATION_GUIDE.md
+   - FILE_PATHS_TO_UPDATE.txt (this file)
+
+Copy/Update Instructions:
+   1. Download LeadForm.jsx and place it at: frontend/src/pages/leads/LeadForm.jsx
+   2. Download Leads.jsx and REPLACE the existing: frontend/src/pages/leads/Leads.jsx
+   3. Add CSS classes from IMPLEMENTATION_GUIDE.md to your stylesheet
+   4. Test all functionality
+
+
+================================================================================
+                            NO BACKEND CHANGES NEEDED
+================================================================================
+
+Your backend already has everything:
+   ✅ LeadController with all endpoints
+   ✅ LeadService with create/update/delete logic
+   ✅ Lead entity and DTOs
+   ✅ Mappers for data conversion
+   ✅ Specifications for filtering
+   ✅ AuditLog integration
+
+Endpoints available:
+   GET    /api/leads              → List all leads
+   GET    /api/leads/{id}         → Get single lead
+   POST   /api/leads              → Create lead
+   PUT    /api/leads/{id}         → Update lead
+   DELETE /api/leads/{id}         → Delete lead
+   POST   /api/leads/{id}/convert → Convert to contact
+
+
+================================================================================
+                          DATABASE SCHEMA READY
+================================================================================
+
+leads table already has all required columns:
+   ✅ id, first_name, last_name, email, phone
+   ✅ company, source, status, notes
+   ✅ owner_id, converted_contact_id, converted_at
+   ✅ created_at, updated_at
+
+Status enum values: NEW, CONTACTED, QUALIFIED, CONVERTED, LOST
+
+
+================================================================================
+                          NEXT STEPS AFTER JWT
+================================================================================
+
+When you implement JWT and password hashing:
+   1. No frontend changes needed - already configured to use auth headers
+   2. No backend changes needed - already has JWT handling
+   3. Components will automatically work with secure authentication
+
+
+================================================================================
